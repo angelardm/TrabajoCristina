@@ -48,6 +48,7 @@ namespace Trabajo2
             this.dgv_listaAnimal = new System.Windows.Forms.DataGridView();
             this.label_Total = new System.Windows.Forms.Label();
             this.textBoxTotal = new System.Windows.Forms.TextBox();
+            this.btn_Comprar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_listaAnimal)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,6 +72,7 @@ namespace Trabajo2
             this.btn_Eliminar.TabIndex = 1;
             this.btn_Eliminar.Text = "Eliminar";
             this.btn_Eliminar.UseVisualStyleBackColor = false;
+            this.btn_Eliminar.Click += new System.EventHandler(this.btn_Eliminar_Click);
             // 
             // btn_Modificar
             // 
@@ -81,6 +83,7 @@ namespace Trabajo2
             this.btn_Modificar.TabIndex = 2;
             this.btn_Modificar.Text = "Modificar";
             this.btn_Modificar.UseVisualStyleBackColor = false;
+            this.btn_Modificar.Click += new System.EventHandler(this.btn_Modificar_Click);
             // 
             // btn_Insertar
             // 
@@ -91,6 +94,7 @@ namespace Trabajo2
             this.btn_Insertar.TabIndex = 3;
             this.btn_Insertar.Text = "Insertar";
             this.btn_Insertar.UseVisualStyleBackColor = false;
+            this.btn_Insertar.Click += new System.EventHandler(this.btn_Insertar_Click);
             // 
             // btn_Buscar
             // 
@@ -101,6 +105,7 @@ namespace Trabajo2
             this.btn_Buscar.TabIndex = 4;
             this.btn_Buscar.Text = "Buscar";
             this.btn_Buscar.UseVisualStyleBackColor = false;
+            this.btn_Buscar.Click += new System.EventHandler(this.btn_Buscar_Click);
             // 
             // label2
             // 
@@ -123,7 +128,6 @@ namespace Trabajo2
             this.label3.Size = new System.Drawing.Size(47, 15);
             this.label3.TabIndex = 6;
             this.label3.Text = "Especie";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -191,7 +195,7 @@ namespace Trabajo2
             this.dgv_listaAnimal.Name = "dgv_listaAnimal";
             this.dgv_listaAnimal.Size = new System.Drawing.Size(284, 150);
             this.dgv_listaAnimal.TabIndex = 14;
-            this.dgv_listaAnimal.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dgv_listaAnimal.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_listaAnimal_CellContentClick);
             // 
             // label_Total
             // 
@@ -211,11 +215,23 @@ namespace Trabajo2
             this.textBoxTotal.Size = new System.Drawing.Size(100, 20);
             this.textBoxTotal.TabIndex = 16;
             // 
-            // TiendaDeportes
+            // btn_Comprar
+            // 
+            this.btn_Comprar.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_Comprar.Location = new System.Drawing.Point(442, 242);
+            this.btn_Comprar.Name = "btn_Comprar";
+            this.btn_Comprar.Size = new System.Drawing.Size(75, 23);
+            this.btn_Comprar.TabIndex = 17;
+            this.btn_Comprar.Text = "Comprar";
+            this.btn_Comprar.UseVisualStyleBackColor = false;
+            this.btn_Comprar.Click += new System.EventHandler(this.btn_Comprar_Click);
+            // 
+            // Form1
             // 
             this.BackgroundImage = global::Trabajo2.Properties.Resources.pet;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(573, 337);
+            this.Controls.Add(this.btn_Comprar);
             this.Controls.Add(this.textBoxTotal);
             this.Controls.Add(this.label_Total);
             this.Controls.Add(this.dgv_listaAnimal);
@@ -233,30 +249,16 @@ namespace Trabajo2
             this.Controls.Add(this.btn_Modificar);
             this.Controls.Add(this.btn_Eliminar);
             this.Controls.Add(this.label1);
-            this.Name = "TiendaDeportes";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Name = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dgv_listaAnimal)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private Label label_Total;
         private TextBox textBoxTotal;
+        private Button btn_Comprar;
     }
 }

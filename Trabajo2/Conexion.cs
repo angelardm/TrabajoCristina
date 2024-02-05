@@ -12,7 +12,7 @@ namespace Trabajo2
     internal class Conexion
     {
         MySqlConnection conexion;
-        string strCon = "server=localhost;database=animales;uid=root;password=";
+        string strCon = "server=localhost;port=3308;database=animales;uid=root;password=";
 
 
 
@@ -63,7 +63,7 @@ namespace Trabajo2
 
         public MySqlConnection GetCon() // Método para abrir y recuperar la conexión
         {
-            conexion = new MySqlConnection();
+            conexion = new MySqlConnection(strCon);
             conexion.Open();
             return conexion;
         }
@@ -80,7 +80,7 @@ namespace Trabajo2
         /**
         * Método para ACTUALIZAR
         */
-        public void ActualizarArticuloEnBD(Animal animal)
+        public void ActualizarAnimalEnBD(Animal animal)
         {
             try
             {
